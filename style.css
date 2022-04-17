@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    /* background-color: #333; */
+}
+
+.header {
+    background-color: #fff;
+}
+.top_header {
+    background-color: #0abde3;
+    padding: 10px;
+    color: #fff;
+}
+.center_header h2 span {
+    color: #0abde3;
+    font-family: 'Segoe Script';
+}
+.bottom_header::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.bottom_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom_header ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.bottom_header ul a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 32px;
+    padding: 5px 15px;
+    display: block;
+}
+.bottom_header ul li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.bottom_header ul ul {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(73, 73, 73, 0.2);
+    top: 100%;
+    left: 0;
+    display: none;
+}
+.bottom_header ul ul ul {
+    top: 0px;
+    left: 100%;
+}
+.bottom_header ul ul li {
+    float: none;
+    width: 200px;
+    border-left: 3px solid transparent;
+}
+.bottom_header ul ul li:hover {
+    border-left: 3px solid #0abde3;
+    background-color: #f5f5f5d0;
+}
+.bottom_header ul li:hover > ul {
+    display: block;
+}
+.hero_section {
+    width: 100%;
+    height: 40vh;
+    background-image: url('media/cover.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 8%;
+    text-align: center;
+}
+.hero_section h2, p {
+    color: #fff;
+    text-shadow: 1px 1px 5px rgb(107, 107, 107);
+}
+.hero_section button {
+    padding: 5px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 15px;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.212);
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s linear;
+}
+.hero_section button:hover {
+    background-color: #0abde3;
+    border: 1px solid #0abde3;
+}
+
+.cate_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.cate_wrap a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+.cate_wrap a:hover {
+    text-decoration: underline;
+}
+
+.offer_wrap {
+    background-image: url('media/img1.jpg');
+}
+.offer_wrap2 {
+    background-image: url('media/img2.jpg');
+}
+.offer_wrap3 {
+    background-image: url('media/img3.jpg');
+}
+
+.offer_wrap, .offer_wrap2, .offer_wrap3 {
+    width: 100%;
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+}
+.offer_wrap:hover:after, .offer_wrap2:hover:after, .offer_wrap3:hover:after {
+    content: 'View Location';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    background-color: rgba(51, 51, 51, 0.534);
+    color: #fff;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s linear;
+}
+
+.user_wrap {
+    background-color: #fff;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.212);
+    width: 100%;
+    height: 85%;
+    position: relative;
+    top: 57px;
+    display: grid;
+    grid-template-rows: 20% 1fr 15%;
+}
+
+.user_wrap div:nth-child(1) {
+    /* background-color: purple; */
+    /* border-bottom: 1px solid rgba(122, 122, 122, 0.212); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+    top: -50%;
+    border: 2px solid #fff;
+}
+.user-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user_wrap div:nth-child(2) {
+    /* background-color: peru; */
+    text-align: center;
+    padding: 5px;
+}
+.user_wrap div:nth-child(2) p strong {
+    color: #333;
+    text-shadow: none;
+}
+
+.user_wrap div:nth-child(3) {
+    background-color: #0abde3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s linear;
+}
+.user_wrap div:nth-child(3):hover {
+    background-color: #0899b9;
+}
+.user_wrap div:nth-child(3) button {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.project_wrap {
+    background-color: #fff;
+    box-shadow: 2px 2px 3px rgba(146, 146, 146, 0.212);
+    width: 100%;
+    height: 30vh;
+    display: grid;
+    grid-template-rows: 1fr 20%;
+    margin-bottom: 9%;
+}
+.top_proj {
+    /* background-color: aquamarine; */
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.top_proj img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0;
+
+    transition: transform 200ms;
+}
+.top_proj:hover > img {
+    transform: scale(1.05);
+}
+.bottom_proj {
+    /* background-color: rgb(130, 37, 192); */
+    display: flex;
+    align-items: center;
+    padding: 9px;
+    color: #333;
+    font-size: 14px;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+.bottom_proj:hover {
+    text-decoration: underline;
+}
+
+.subscribe_box {
+    background-color: #dfe4ea;
+}
+.subs_box {
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.212);
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.subs_box input {
+    width: 90%;
+    outline: none;
+    border: none;
+    background: none;
+    color: #333;
+    font-size: 13px;
+    padding-left: 15px;
+}
+.subs_box input::placeholder {
+    color: #333;
+}
+.subs_box button {
+    border: 2px solid #fff;
+    background-color: #0abde3;
+    padding: 8px 20px;
+    font-size: 12px;
+    color: #fff;
+    transition: 0.2s linear;
+}
+.subs_box button:hover {
+    outline: 2px solid #0abde3;
+}
+.subscribe_box small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+    font-size: 14px;
+}
+
+.footer {
+    background-color: #0abde3;
+    color: rgba(255, 255, 255, 0.863);
+    padding-top: 3%;
+}
+.footer ul {
+    list-style: none;
+    /* text-align: center; */
+}
+.footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    line-height: 25px;
+}
+.footer ul li a:hover {
+    text-decoration: underline;
+}
